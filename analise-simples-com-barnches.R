@@ -16,9 +16,13 @@ dados$faixa_etaria = ifelse(dados$idade < 30, "Jovem",
 dados$faixa_etaria = factor(dados$faixa_etaria)
 
 # 2. Distribuição de frequências e gráficos
-# (PREENCHER NO BRANCH analise-graficos,)
-# use comandos para distribuição de frequências de sexo, gráfico de colunas para faixa_etaria por sexo, histograma de altura, boxplot de IMC por sexo
+table(dados$sexo)
 
+barplot(table(dados$faixa_etaria, dados$sexo))
+
+hist(dados$imc)
+
+boxplot(dados$imc ~ dados$sexo)
 
 # 3. Medidas descritivas
 # (PREENCHER NO BRANCH analise-medidas) 
